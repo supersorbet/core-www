@@ -114,7 +114,7 @@ class ErrorBoundary extends React.Component {
               <p>
                 <small>
                   If you'd like to know more, you can search online later for this error:
-                  <span>&nbsp;DEVS_TOO_COOL</span>
+                  <span>&nbsp;DEVS_TOO_GAY</span>
                 </small>
               </p>
             </footer>
@@ -166,7 +166,7 @@ const Providers = props => {
         <UseWalletProvider
           chainId={CHAIN_ID}
           connectors={{
-            walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
+            walletconnect: { rpcUrl: 'https://goerli.infura.io/v3/' },
           }}
         >
           <WalletProvider>

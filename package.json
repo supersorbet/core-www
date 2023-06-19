@@ -1,5 +1,5 @@
 {
-  "name": "core-www",
+  "name": "www",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -51,8 +51,8 @@
     "webamp": "^1.4.1-beta05"
   },
   "scripts": {
-    "start": "cross-env HOST=0.0.0.0 PORT=3000 react-scripts start",
-    "build": "cross-env CI= GENERATE_SOURCEMAP=false react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

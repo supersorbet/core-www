@@ -61,7 +61,7 @@ h2 {
 
 #desktop-background {
   position: fixed;
-  background: teal;
+  background: rgb(191, 220, 220);
   z-index: -100;
   inset: 0px;
   height: 100%;
@@ -83,7 +83,7 @@ pre {
 }
 
 .darker {
-  background-color: #c0c0c0;
+  background-color: #eba1a1;
 }
 
 .checkboxes input[type='checkbox'] {

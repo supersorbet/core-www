@@ -3,31 +3,31 @@ import * as Types from './types.js';
 import { SUBTRACT_GAS_LIMIT, addressMap } from './constants.js';
 
 import ERC20Json from '../clean_build/contracts/IERC20.json';
-import YAMv2Json from '../clean_build/contracts_old/YAMv2.json';
-import YAMJson from '../clean_build/contracts_old/YAMDelegator.json';
+//import YAMv2Json from '../clean_build/contracts_old/YAMv2.json';
+//import YAMJson from '../clean_build/contracts_old/YAMDelegator.json';
 import WETHJson from './weth.json';
 import UNIFactJson from './unifact2.json';
 import UNIPairJson from './uni2.json';
 import UNIRouterJson from './uniR.json';
-import CORE from '../clean_build/contracts/CORE.json';
-import FANNY from '../clean_build/contracts/FANNY.json';
-import FannyRouter from '../clean_build/contracts/FannyRouter.json';
-import COREVAULT from '../clean_build/contracts/CoreVault.json';
-import FANNYVAULT from '../clean_build/contracts/FannyVault.json';
-import COREROUTER from '../clean_build/contracts/COREv1Router.json';
-import LGE2ABI from '../clean_build/contracts/cLGE.json';
-import LGE3ABI from '../clean_build/contracts/CORE_LGE_3.json';
+//import CORE from '../clean_build/contracts/CORE.json';
+//import FANNY from '../clean_build/contracts/FANNY.json';
+//import FannyRouter from '../clean_build/contracts/FannyRouter.json';
+//import COREVAULT from '../clean_build/contracts/CoreVault.json';
+//import FANNYVAULT from '../clean_build/contracts/FannyVault.json';
+//import COREROUTER from '../clean_build/contracts/COREv1Router.json';
+//import LGE2ABI from '../clean_build/contracts/cLGE.json';
+//import LGE3ABI from '../clean_build/contracts/CORE_LGE_3.json';
 
 import WBTC from '../clean_build/contracts/WBTC.json';
-import CBTC from '../clean_build/contracts/cBTC.json';
-import cDAI from '../clean_build/contracts/cDAI.json';
-import DAI from '../clean_build/contracts/DAI.json';
-import CoreDAOTreasury from '../clean_build/contracts/CoreDAOTreasury.json';
-import wCORE from '../clean_build/contracts/wCORE.json';
-import FlashArbitrageController from '../clean_build/contracts/FlashArbitrageController.json';
-import COREForkMigrator from '../clean_build/contracts/COREForkMigrator.json';
-import TransferChecker from '../clean_build/contracts/TransferChecker.json';
-import CoreDaoLpJson from '../clean_build/contracts/coreDaoLp.json';
+//import CBTC from '../clean_build/contracts/cBTC.json';
+//import cDAI from '../clean_build/contracts/cDAI.json';
+//import DAI from '../clean_build/contracts/DAI.json';
+//import CoreDAOTreasury from '../clean_build/contracts/CoreDAOTreasury.json';
+//import wCORE from '../clean_build/contracts/wCORE.json';
+//import FlashArbitrageController from '../clean_build/contracts/FlashArbitrageController.json';
+//import COREForkMigrator from '../clean_build/contracts/COREForkMigrator.json';
+//import TransferChecker from '../clean_build/contracts/TransferChecker.json';
+//import CoreDaoLpJson from '../clean_build/contracts/coreDaoLp.json';
 
 const DEFAULT_CONFIRMATIONS = 1;
 const DEFAULT_GAS = '6000000';
@@ -45,27 +45,27 @@ export class Contracts {
     this.defaultGasPrice = options.defaultGasPrice || DEFAULT_GAS_PRICE;
 
     // core vault
-    this.COREVAULT = new this.web3.eth.Contract(COREVAULT.abi);
+   // this.COREVAULT = new this.web3.eth.Contract(COREVAULT.abi);
 
     // Fanny vault
-    this.FANNYVAULT = new this.web3.eth.Contract(FANNYVAULT.abi);
+   // this.FANNYVAULT = new this.web3.eth.Contract(FANNYVAULT.abi);
 
     // Router
-    this.COREROUTER = new this.web3.eth.Contract(COREROUTER.abi);
+  /*  this.COREROUTER = new this.web3.eth.Contract(COREROUTER.abi);
     this.FannyRouter = new this.web3.eth.Contract(FannyRouter.abi);
 
     //LGE2
     this.LGE2 = new this.web3.eth.Contract(LGE2ABI.abi);
     this.LGE3 = new this.web3.eth.Contract(LGE3ABI.abi);
-
+*/
     //Executor flash arb
-    this.ARBITRAGECONTROLLER = new this.web3.eth.Contract(FlashArbitrageController.abi);
+  /*  this.ARBITRAGECONTROLLER = new this.web3.eth.Contract(FlashArbitrageController.abi);
     this.COREFORKMIGRATOR = new this.web3.eth.Contract(COREForkMigrator.abi);
 
     this.TRANSFERCHECKER = new this.web3.eth.Contract(TransferChecker.abi);
 
     this.CoreDAOTreasury = new this.web3.eth.Contract(CoreDAOTreasury);
-
+*/
     // Uniswap stuff
     this.uni_pair = new this.web3.eth.Contract(UNIPairJson);
     this.uni_router = new this.web3.eth.Contract(UNIRouterJson);
@@ -74,35 +74,36 @@ export class Contracts {
     /// Liquidity tokens
     this.UNIUSDT = new this.web3.eth.Contract(UNIPairJson);
     this.WBTCxWETH = new this.web3.eth.Contract(UNIPairJson);
-    this.genericUNIPair = new this.web3.eth.Contract(UNIPairJson);
-    this.encoreLP = new this.web3.eth.Contract(UNIPairJson);
-    this.unicoreLP = new this.web3.eth.Contract(UNIPairJson);
-    this.tensLP = new this.web3.eth.Contract(UNIPairJson);
-    this.coreDaoLp1 = new this.web3.eth.Contract(CoreDaoLpJson);
-    this.coreDaoLp2 = new this.web3.eth.Contract(CoreDaoLpJson);
-    this.coreDaoLp3 = new this.web3.eth.Contract(CoreDaoLpJson);
+   // this.genericUNIPair = new this.web3.eth.Contract(UNIPairJson);
+   // this.encoreLP = new this.web3.eth.Contract(UNIPairJson);
+   // this.unicoreLP = new this.web3.eth.Contract(UNIPairJson);
+   // this.tensLP = new this.web3.eth.Contract(UNIPairJson);
+    //this.coreDaoLp1 = new this.web3.eth.Contract(CoreDaoLpJson);
+   // this.coreDaoLp2 = new this.web3.eth.Contract(CoreDaoLpJson);
+   // this.coreDaoLp3 = new this.web3.eth.Contract(CoreDaoLpJson);
 
     // Core tokens
-    this.core = new this.web3.eth.Contract(CORE.abi);
+   /* this.core = new this.web3.eth.Contract(CORE.abi);
     this.wCORE = new this.web3.eth.Contract(wCORE.abi);
     this.fanny = new this.web3.eth.Contract(FANNY.abi);
     this.cDAI = new this.web3.eth.Contract(cDAI.abi);
     this.coreDAO = new this.web3.eth.Contract(cDAI.abi);
     this.DAI = new this.web3.eth.Contract(DAI.abi);
     this.CBTC = new this.web3.eth.Contract(CBTC.abi);
+    */
 
     // Core Pairs
-    this.CORExWETH = new this.web3.eth.Contract(UNIPairJson);
-    this.CORExcBTC = new this.web3.eth.Contract(UNIPairJson);
-    this.FANNYxCORE = new this.web3.eth.Contract(UNIPairJson);
-    this.cDAIxwCORE = new this.web3.eth.Contract(UNIPairJson);
+   // this.CORExWETH = new this.web3.eth.Contract(UNIPairJson);
+   // this.CORExcBTC = new this.web3.eth.Contract(UNIPairJson);
+  //  this.FANNYxCORE = new this.web3.eth.Contract(UNIPairJson);
+  //  this.cDAIxwCORE = new this.web3.eth.Contract(UNIPairJson);
   
     // Main token
-    this.yam = new this.web3.eth.Contract(YAMJson.abi);
-    this.yamV2 = new this.web3.eth.Contract(YAMv2Json.abi);
+   // this.yam = new this.web3.eth.Contract(YAMJson.abi);
+   // this.yamV2 = new this.web3.eth.Contract(YAMv2Json.abi);
 
     //ERC95
-    this.WBTC = new this.web3.eth.Contract(WBTC.abi);
+   // this.WBTC = new this.web3.eth.Contract(WBTC.abi);
 
     this.encore = new this.web3.eth.Contract(CORE.abi);
     this.yfi = new this.web3.eth.Contract(ERC20Json.abi);
@@ -135,10 +136,10 @@ export class Contracts {
     this.uni_fact.options.address = addressMap['uniswapFactoryV2'];
     this.uni_router.options.address = addressMap['UNIRouter'];
 
-    this.ARBITRAGECONTROLLER.options.address = addressMap['ARBITRAGECONTROLLER'];
+   /* this.ARBITRAGECONTROLLER.options.address = addressMap['ARBITRAGECONTROLLER'];
     this.COREFORKMIGRATOR.options.address = addressMap['COREFORKMIGRATOR'];
     this.TRANSFERCHECKER.options.address = addressMap['TRANSFERCHECKER'];
-
+*/
     this.encoreLP.options.address = addressMap['encoreLP'];
     this.unicoreLP.options.address = addressMap['unicoreLP'];
     this.tensLP.options.address = addressMap['tensLP'];

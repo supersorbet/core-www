@@ -1,6 +1,7 @@
 import BigNumber from 'bignumber.js/bignumber';
 
-export const CHAIN_ID = 1;
+export const CHAIN_ID = 5;
+
 export const SUBTRACT_GAS_LIMIT = 100000;
 export const APP_VERSION = "2.4.0";
 
@@ -29,13 +30,13 @@ export const INTEGERS = {
   INTEREST_RATE_BASE: new BigNumber('1e18'),
 };
 
-export const web3Url = "https://eth-mainnet.alchemyapi.io/v2/TsLEJAhX87icgMO7ZVyPcpeEgpFEo96O";
+export const web3Url = "https://goerli.infura.io/v3/";
 
 export const addressMap = {
   // uni shit
   uniswapFactory: '0xc0a47dFe034B400B47bDaD5FecDa2621de6c4d95',
-  uniswapFactoryV2: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
-  UNIRouter: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
+  uniswapFactoryV2: '0x1097053Fd2ea711dad45caCcc45EfF7548fCB362 ',
+  UNIRouter: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
 
   // Core pairs
   CORExcBTC: '0x6fad7d44640c5cd0120deec0301e8cf850becb68',

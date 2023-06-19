@@ -17,7 +17,7 @@ import {
 import BigNumber from 'bignumber.js';
 import arcadiaIMG from '../../assets/img/arcadiaLogo.png';
 import msdosIMG from '../../assets/img/ms_dos-1.png';
-import coverLogoIMG from '../../assets/img/cover-logo.png';
+// import coverLogoIMG from '../../assets/img/cover-logo.png';
 import fannyBackgroundIMG from '../../assets/img/fanny/background.png';
 import { DESKTOP_ZINDEX, WindowsContext } from '../../contexts/Windows';
 import { WindowLoadingComponent } from '../../components/Loading';
@@ -97,7 +97,7 @@ const OnlinePresenceLinks = styled.div`
 
 const Desktop = ({width, height}) => {
   const settings = React.useContext(SettingsContext);
-  const liquidityStats = useLiquidityStats();
+//  const liquidityStats = useLiquidityStats();
   const yam = useYam();
   const wallet = useWallet();
   const windowsContext = React.useContext(WindowsContext);
@@ -217,18 +217,18 @@ const Desktop = ({width, height}) => {
       </a>
 
       <h1 id="core-message" style={{ zIndex: DESKTOP_ZINDEX }}>
-        <div>CoreVault is the first high yield farmable deflationary DeFi token with low risk lending</div>
+        <div>Wawawawawawawawawawawawa where am i???</div>
         <OnlinePresenceLinks>
           We are on{' '}
-          <Anchor href="https://t.me/COREVault" target="_blank">
+          <Anchor href="" target="_blank">
             Telegram
           </Anchor>
           ,{' '}
-          <Anchor href="https://discord.gg/hPUm9Jh" target="_blank">
+          <Anchor href="" target="_blank">
             Discord
           </Anchor>{' '}
           ,{' '}
-          <Anchor href="https://twitter.com/CORE_Vault" target="_blank">
+          <Anchor href="" target="_blank">
             Twitter
           </Anchor>{' '}
           ,{' '}
